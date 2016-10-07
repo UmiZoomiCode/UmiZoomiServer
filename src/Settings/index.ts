@@ -1,0 +1,1 @@
+export { SettingManager } from './SettingManager';
