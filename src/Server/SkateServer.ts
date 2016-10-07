@@ -1,4 +1,5 @@
 import { Controller, ControllerFactory } from "../Controllers";
+import { SettingManager } from "../Settings";
 import socketIO = require('socket.io')
 import http = require("http");
 
@@ -12,7 +13,8 @@ export class SkateServer {
 		this.Factory = factory;
 		this.SocketServer = socketIO();
 		
-		this.SocketServer.on('connnection', (socket) => {
+		this.SocketServer.on('connnection', (socket: SocketIO.Socket) => {
+			new SettingManager(socket);
 			socket.on('control', (data) => {
 				if(this.ActiveController === undefined){
 					this.Connection = socket;
@@ -32,6 +34,6 @@ export class SkateServer {
 	public static Main(){
 		let factory = new ControllerFactory();
 		let server = new SkateServer(factory);
-		
+
 	}
 }
