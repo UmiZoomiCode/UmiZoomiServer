@@ -28,4 +28,10 @@ export class SkateServer {
 			});
 		});
 	}
+	
+	public static Main(){
+		let factory = new ControllerFactory();
+		let server = new SkateServer(factory);
+		
+	}
 }
