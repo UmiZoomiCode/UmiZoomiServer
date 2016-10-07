@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/UmiZoomiCode/UmiZoomiServer/issues"
   },
-  "homepage": "https://github.com/UmiZoomiCode/UmiZoomiServer#readme"
+  "homepage": "https://github.com/UmiZoomiCode/UmiZoomiServer#readme",
+  "dependencies": {
+    "socket.io": "^1.5.0"
+  }
 }
