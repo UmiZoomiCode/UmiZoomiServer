@@ -1,0 +1,19 @@
+{
+  "name": "umizoomiserver",
+  "version": "0.0.1",
+  "description": "A Library to communicate to the UmiZoomiPwm module through various controllers.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UmiZoomiCode/UmiZoomiServer.git"
+  },
+  "author": "Aaron Light, Reese Bingham, Patrick Sharp, Griffin Dubanowich",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/UmiZoomiCode/UmiZoomiServer/issues"
+  },
+  "homepage": "https://github.com/UmiZoomiCode/UmiZoomiServer#readme"
+}
