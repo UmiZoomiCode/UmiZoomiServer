@@ -14,7 +14,7 @@ export class SkateServer {
 		this.Factory = factory;
 		this.SocketServer = socketIO(server);
 		
-		this.SocketServer.on('connnection', (socket: SocketIO.Socket) => {
+		this.SocketServer.on('connection', (socket: SocketIO.Socket) => {
 			new SettingManager(socket);
 			socket.on('control', (data) => {
 				if(this.ActiveController === undefined){

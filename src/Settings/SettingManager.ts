@@ -1,4 +1,3 @@
-
 export class SettingManager {
 	public constructor(private socket: SocketIO.Socket){
 		this.socket.on('getProfile', (data) => {
@@ -14,14 +13,14 @@ export class SettingManager {
 		});
 		
 		this.socket.on('disconnect', (data) => {
-			this.socket.removeListener('getSettings');
-			this.socket.removeListener('saveSettings');
+			this.socket.removeListener('getProfile');
+			this.socket.removeListener('saveProfile');
 			this.socket.removeListener('changeProfile');
 		});
 	}
 	
 	public getProfile(data: Object){
-		console.info("getSettings");
+		console.info("getProfile");
 		return {Hello: "World"};
 	}
 	
@@ -31,7 +30,7 @@ export class SettingManager {
 	}
 	
 	public changeProfile(data: Object){
-		console.info("changeSettings");
+		console.info("changeProfile");
 		return {Hello: "World"};
 	}
 }
