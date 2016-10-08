@@ -13,9 +13,6 @@ export class SettingManager {
 		});
 		
 		this.socket.on('disconnect', (data) => {
-			this.socket.removeListener('getProfile');
-			this.socket.removeListener('saveProfile');
-			this.socket.removeListener('changeProfile');
 		});
 	}
 	
