@@ -10,8 +10,9 @@ export class SkateServer {
 	private Connection;
 	
 	public constructor(factory: ControllerFactory){
+		let server = http.createServer(() => {});
 		this.Factory = factory;
-		this.SocketServer = socketIO();
+		this.SocketServer = socketIO(server);
 		
 		this.SocketServer.on('connnection', (socket: SocketIO.Socket) => {
 			new SettingManager(socket);
@@ -29,6 +30,8 @@ export class SkateServer {
 				}
 			});
 		});
+		
+		server.listen(5000);
 	}
 	
 	public static Main(){
