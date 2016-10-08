@@ -1,3 +1,3 @@
-export { Controller } from "./Controller";
-export { SocketController } from "./SocketController";
+export { Controller, ControllerSettings } from "./Controller";
+export { SocketController, SocketControllerSettings } from "./SocketController";
 export { ControllerFactory } from "./ControllerFactory";
