@@ -1,12 +1,12 @@
 
 export class SettingManager {
 	public constructor(private socket: SocketIO.Socket){
-		this.socket.on('getSettings', (data) => {
-			this.socket.emit('settings', this.getSettings(data));
+		this.socket.on('getProfile', (data) => {
+			this.socket.emit('settings', this.getProfile(data));
 		});
 		
-		this.socket.on('saveSettings', (data) => {
-			this.socket.emit('savedSettings', this.saveSettings(data));
+		this.socket.on('saveProfile', (data) => {
+			this.socket.emit('savedProfile', this.saveProfile(data));
 		});
 		
 		this.socket.on('changeProfile', (data) => {
@@ -20,15 +20,18 @@ export class SettingManager {
 		});
 	}
 	
-	public getSettings(data: Object){
-		
+	public getProfile(data: Object){
+		console.info("getSettings");
+		return {Hello: "World"};
 	}
 	
-	public saveSettings(data: Object){
-		
+	public saveProfile(data: Object){
+		console.info("saveProfile");
+		return {Hello: "World"};
 	}
 	
 	public changeProfile(data: Object){
-		
+		console.info("changeSettings");
+		return {Hello: "World"};
 	}
 }
